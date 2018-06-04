@@ -1,0 +1,31 @@
+{
+  "name": "petitesshistoiregrandsdroits",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "",
+    "sass": "./node_modules/.bin/node-sass --output ./public/style/ --source-map true --source-map-contents ./src/sass/",
+    "test": "exit 0"
+  },
+  "author": "Yorick <yorick@ctrlaltdev.xyz>",
+  "licenses": [
+    {
+      "type": "MPL-2.0",
+      "url": "https://github.com/DefenseurDesDroits/PetiteHistoireGrandsDroits/blob/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/DefenseurDesDroits/PetiteHistoireGrandsDroits.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DefenseurDesDroits/PetiteHistoireGrandsDroits/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.9.0",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
