@@ -7,9 +7,10 @@
   "scripts": {
     "sass": "./node_modules/.bin/node-sass --output ./public/css/ --source-map true --source-map-contents ./src/sass/",
     "pug": "./node_modules/.bin/pug ./src/pug/index.pug --out ./public/ -P",
-    "build": "./node_modules/.bin/pug ./src/pug/index.pug --out ./public/ && ./node_modules/.bin/node-sass --output-style 'compressed' --output ./public/css/ --source-map true --source-map-contents ./src/sass/",
-    "pre-start": "./node_modules/.bin/pug ./src/pug/index.pug --out ./public/ -P && ./node_modules/.bin/node-sass --output ./public/css/ --source-map true --source-map-contents ./src/sass/",
-    "start": "npx http-server -S -o"
+    "pre-start": "./node_modules/.bin/pug ./src/pug/index.pug --out ./public/ && ./node_modules/.bin/node-sass --output-style 'compressed' --output ./public/css/ --source-map true --source-map-contents ./src/sass/",
+    "pre-dev": "./node_modules/.bin/pug ./src/pug/index.pug --out ./public/ -P && ./node_modules/.bin/node-sass --output ./public/css/ --source-map true --source-map-contents ./src/sass/",
+    "start": "npx http-server",
+    "dev": "npx http-server -S -o"
   },
   "author": "Yorick <yorick@ctrlaltdev.xyz>",
   "licenses": [
