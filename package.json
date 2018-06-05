@@ -5,9 +5,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "",
-    "sass": "./node_modules/.bin/node-sass --output ./public/style/ --source-map true --source-map-contents ./src/sass/",
-    "test": "exit 0"
+    "sass": "./node_modules/.bin/node-sass --output ./public/css/ --source-map true --source-map-contents ./src/sass/",
+    "pug": "./node_modules/.bin/pug ./src/pug/index.pug --out ./public/ -P",
+    "build": "./node_modules/.bin/pug ./src/pug/index.pug --out ./public/ && ./node_modules/.bin/node-sass --output-style 'compressed' --output ./public/css/ --source-map true --source-map-contents ./src/sass/",
+    "pre-start": "./node_modules/.bin/pug ./src/pug/index.pug --out ./public/ -P && ./node_modules/.bin/node-sass --output ./public/css/ --source-map true --source-map-contents ./src/sass/",
+    "start": "npx http-server -S -o"
   },
   "author": "Yorick <yorick@ctrlaltdev.xyz>",
   "licenses": [
@@ -25,6 +27,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "http-server": "^0.11.1",
     "node-sass": "^4.9.0",
     "pug-cli": "^1.0.0-alpha6"
   }
