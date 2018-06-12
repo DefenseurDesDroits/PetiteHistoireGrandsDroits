@@ -7,8 +7,9 @@
   "scripts": {
     "sass": "./node_modules/.bin/node-sass --output ./public/css/ --source-map true --source-map-contents ./src/sass/",
     "pug": "./node_modules/.bin/pug ./src/pug/index.pug --out ./public/ -P",
-    "pre-start": "./node_modules/.bin/pug ./src/pug/index.pug --out ./public/ && ./node_modules/.bin/node-sass --output-style 'compressed' --output ./public/css/ --source-map true --source-map-contents ./src/sass/",
-    "pre-dev": "./node_modules/.bin/pug ./src/pug/index.pug --out ./public/ -P && ./node_modules/.bin/node-sass --output ./public/css/ --source-map true --source-map-contents ./src/sass/",
+    "webpack": "npx webpack --mode development --devtool source-map",
+    "pre-start": "./node_modules/.bin/pug ./src/pug/index.pug --out ./public/ && ./node_modules/.bin/node-sass --output-style 'compressed' --output ./public/css/ --source-map true --source-map-contents ./src/sass/ && npx webpack --mode production",
+    "pre-dev": "./node_modules/.bin/pug ./src/pug/index.pug --out ./public/ -P && ./node_modules/.bin/node-sass --output ./public/css/ --source-map true --source-map-contents ./src/sass/ && npx webpack --mode development --devtool source-map",
     "start": "npx http-server",
     "dev": "npx http-server -S -o"
   },
@@ -30,6 +31,8 @@
   "devDependencies": {
     "http-server": "^0.11.1",
     "node-sass": "^4.9.0",
-    "pug-cli": "^1.0.0-alpha6"
+    "pug-cli": "^1.0.0-alpha6",
+    "webpack": "^4.12.0",
+    "webpack-command": "^0.2.1"
   }
 }

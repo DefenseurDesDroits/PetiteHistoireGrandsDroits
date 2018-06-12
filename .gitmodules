@@ -1,0 +1,3 @@
+[submodule "wordfind"]
+	path = wordfind
+	url = git@github.com:ctrlaltdev/wordfind.git

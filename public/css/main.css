@@ -135,4 +135,101 @@ html,
 body {
   font-size: 10px; }
 
+#wordsgame {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 3vw; }
+
+#wordsgame > div {
+  width: 100%;
+  margin: 0 auto; }
+
+.puzzleSquare {
+  height: 7vw;
+  width: 7vw;
+  text-transform: uppercase;
+  background-color: white;
+  border: 0;
+  font: 5vw sans-serif; }
+
+@media only screen and (min-width: 600px) {
+  #wordsgame {
+    float: left;
+    padding: 1rem; }
+  .puzzleSquare {
+    height: 3.5rem;
+    width: 3.5rem;
+    font: 2.5rem sans-serif; } }
+
+button::-moz-focus-inner {
+  border: 0; }
+
+#wordsgame .selected {
+  background-color: orange; }
+
+#wordsgame .found {
+  background-color: blue;
+  color: white; }
+
+#wordsgame .solved {
+  background-color: purple;
+  color: white; }
+
+#wordsgame .complete {
+  background-color: green; }
+
+#wordslist {
+  display: inline-block;
+  max-width: 30rem;
+  padding: 1em;
+  list-style-type: none;
+  text-align: left; }
+
+@media only screen and (min-width: 600px) {
+  #wordslist {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    column-gap: 20px; } }
+
+#wordslist li {
+  padding: 3px 0;
+  font: 1em sans-serif; }
+
+.wordFound {
+  text-decoration: line-through;
+  color: gray; }
+
+#controls {
+  display: inline-block;
+  max-width: 30rem;
+  padding: 1em;
+  border: none;
+  text-align: left; }
+
+label {
+  white-space: nowrap;
+  margin-top: 1em; }
+
+input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 1em; }
+
+input[type="number"] {
+  width: 2rem; }
+
+select {
+  max-width: 10rem; }
+
+#create-grid, #solve {
+  display: block;
+  margin-top: 1rem; }
+
+#secret-word {
+  text-transform: uppercase; }
+
+#result-message {
+  font-size: 1.2em; }
+
 /*# sourceMappingURL=main.css.map */
