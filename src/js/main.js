@@ -55,3 +55,7 @@ var wordGame = new wordFind(words, puzzleElem, {
   maxGridGrowth: 50,
   preferOverlap: false
 })
+
+document.querySelector('#incoweb').addEventListener('click', () => {
+  window.open('http://incoweb.playbac.fr/indexhtml.php5?livret=74', 'EVENTAIL_PLAYBAC', 'height=700, width=900, toolbar=no, menubar=no, scrollbars=yes, resizable=no, location=no, directories=no, status=no')
+})

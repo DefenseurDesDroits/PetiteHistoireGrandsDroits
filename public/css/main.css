@@ -135,6 +135,9 @@ html,
 body {
   font-size: 10px; }
 
+#incoweb {
+  cursor: pointer; }
+
 #wordsgame {
   display: inline-block;
   border: 1px solid black;
@@ -154,7 +157,6 @@ body {
 
 @media only screen and (min-width: 600px) {
   #wordsgame {
-    float: left;
     padding: 1rem; }
   .puzzleSquare {
     height: 3.5rem;

@@ -154,6 +154,10 @@ var wordGame = new _wordfind_src_wordfind_js__WEBPACK_IMPORTED_MODULE_0__["defau
   preferOverlap: false
 })
 
+document.querySelector('#incoweb').addEventListener('click', () => {
+  window.open('http://incoweb.playbac.fr/indexhtml.php5?livret=74', 'EVENTAIL_PLAYBAC', 'height=700, width=900, toolbar=no, menubar=no, scrollbars=yes, resizable=no, location=no, directories=no, status=no')
+})
+
 /***/ }),
 
 /***/ "./wordfind/src/wordfind.js":
@@ -175,7 +179,7 @@ class wordFind {
    *Creates an instance of wordFind.
    * @param {!Array.<string>} words list of words to include in the puzzle
    * @param {!HTMLElement} domElem HTML DOM Element that will contain the game
-   * @param {!{lang: [!string], heigth: [!number], width: [!number], orientations: [!Array.<string>], fillBlanks: [!boolean], allowExtraBlanks: [!boolean], maxAttempts: [!number], maxGridGrowth: [!number], preferOverlap: [!boolean]}} [opts={}] game options
+   * @param {!Object} [opts={}] game options
    * @param {!string} [opts.lang] define the letters set to use, depending on the words language, must be the ISO 639-1 language code, default: EN
    * @param {!number} [opts.heigth] desired height of the puzzle, default: smallest possible
    * @param {!number} [opts.width] desired width of the puzzle, default: smallest possible
@@ -508,9 +512,9 @@ class wordFind {
 
   /**
    *If overlap maximization is true, this function is used to prune the list of valid locations down to the ones that contain the maximum overlap that was previously calculated
-   * @param {Array.<{x: number, y: number}} locations set of locations to prune
+   * @param {Array.<Object>} locations set of locations to prune
    * @param {number} overlap required level of overlap
-   * @returns {Array.<{x: number, y: number}} pruned set of locations
+   * @returns {Array.<Object>} pruned set of locations
    * @private
    * @memberof wordFind
    */
