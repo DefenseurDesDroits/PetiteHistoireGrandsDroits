@@ -830,9 +830,10 @@ class wordFind {
 
   playTurn(elem) {
     for (var i = 0, len = this.wordList.length; i < len; i++) {
-      if (this.wordList[i].toUpperCase().indexOf(this.curWord + elem.innerText) === 0) {
+      if (this.wordList[i].toUpperCase().indexOf(this.curWord.toUpperCase() + elem.innerText.toUpperCase()) === 0) {
         elem.classList.add('selected')
-        this.selectedSquares.push(elem)
+        let selectedSquares = this.selectedSquares
+        selectedSquares.push(elem)
         this.curWord += elem.innerText
       }
     }
@@ -840,7 +841,7 @@ class wordFind {
 
   endTurn() {
     for (let i = 0 ; i < this. wordList.length ; i++) {
-      if (this.wordList[i].toUpperCase() === this.curWord) {
+      if (this.wordList[i].toUpperCase() === this.curWord.toUpperCase()) {
         let selected = document.querySelectorAll('.selected');
         [].forEach.call(selected, (item) => {
           item.classList.add('found')
