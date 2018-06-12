@@ -52,7 +52,9 @@ var puzzleElem = document.querySelector('#wordsgame')
 var wordGame = new wordFind(words, puzzleElem, {
   lang: 'FR',
   orientations: ['horizontal', 'vertical'],
-  maxGridGrowth: 50,
+  height: 20,
+  width: 25,
+  maxAttempts: 100,
   preferOverlap: false
 })
 
