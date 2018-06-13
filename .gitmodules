@@ -1,0 +1,6 @@
+[submodule "src/lib/wordpuzzle"]
+	path = src/lib/wordpuzzle
+	url = https://github.com/ctrlaltdev/wordpuzzle.git
+[submodule "src/lib/matchgame"]
+	path = src/lib/matchgame
+	url = https://github.com/ctrlaltdev/matchgame.git
