@@ -1,4 +1,4 @@
-import wordFind from '../../wordfind/src/wordfind.js'
+import wordPuzzle from '../lib/wordpuzzle/src/wordpuzzle.js'
 
 console.warn("I am self aware")
 
@@ -49,7 +49,7 @@ var words = [
 
 var puzzleElem = document.querySelector('#wordsgame')
 
-var wordGame = new wordFind(words, puzzleElem, {
+var wordGame = new wordPuzzle(words, puzzleElem, {
   lang: 'FR',
   orientations: ['horizontal', 'vertical'],
   height: 20,
