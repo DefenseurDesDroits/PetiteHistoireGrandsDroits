@@ -1,3 +1,0 @@
-[submodule "wordfind"]
-	path = src/lib/wordpuzzle
-	url = https://github.com/ctrlaltdev/wordpuzzle.git
