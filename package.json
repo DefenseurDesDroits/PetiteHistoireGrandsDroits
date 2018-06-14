@@ -29,6 +29,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "haikunator": "^2.0.0",
     "http-server": "^0.11.1",
     "node-sass": "^4.9.0",
     "pug-cli": "^1.0.0-alpha6",
