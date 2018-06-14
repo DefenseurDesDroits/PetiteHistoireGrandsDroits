@@ -6,22 +6,60 @@ console.warn("I am self aware")
 // GAME 1
 var matchImgElem = document.querySelector('#matchImg')
 
-var matcheesList = {
-  "Le droit à une vie familiale":"img/match-A.png",
-  "Le droit de s'exprimer":"img/match-B.png",
-  "Le droit à l'égalité":"img/match-C.png",
-  "Le droit à la santé":"img/match-D.png",
-  "Le droit à l'éducation":"img/match-E.png",
-  "Le droit à la protection":"img/match-F.png",
-  "Le droit à la justice":"img/match-G.png"
-}
+var matcheesImgList = [
+  [
+    "Le droit à une vie familiale",
+    "Le droit de s'exprimer",
+    "Le droit à l'égalité",
+    "Le droit à la santé",
+    "Le droit à l'éducation",
+    "Le droit à la protection",
+    "Le droit à la justice"
+  ],
+  [
+    "https://via.placeholder.com/150x50?text=FAMILLE",
+    "https://via.placeholder.com/150x50?text=EXPRESSION",
+    "https://via.placeholder.com/150x50?text=EGALITE",
+    "https://via.placeholder.com/150x50?text=SANTE",
+    "https://via.placeholder.com/150x50?text=EDUC",
+    "https://via.placeholder.com/150x50?text=PROTEC",
+    "https://via.placeholder.com/150x50?text=JUSTICE"
+  ]
+]
 
-var matchImg = new matchGame(matcheesList, matchImgElem)
+matcheesImgList[1] = matcheesImgList[1].map((img) => {
+  let elem = document.createElement('img')
+  elem.setAttribute('src', img)
+  return elem
+})
+
+var matchImg = new matchGame(matcheesImgList, matchImgElem)
 
 // GAME 2
 var matchSentenceElem = document.querySelector('#matchSentence')
 
-var matchSentence = new matchGame()
+var matcheesSentenceList = [
+  [
+    "Tu as le droit d'avoir une justice adaptée à ton âge : tout enfant a droit à un avocat spécialisé pour le conseiller et le défendre, et le droit d'être jugé par un juge des enfants s'il n'a pas respecté la loi.",
+    "Tu as le droit d'aller voir un médecin, une infirmière, de te soigner lorsque tu es malade, d'être bien nourri.",
+    "Tu as le droit d'etre protégé contre toute forme de violence, d'atteinte ou de brutalités physiques ou mentales, d'abandon ou de négligence.",
+    "Tu as le droit d'aller à l'école gratuitement, d'apprendre, d'avoir accès aux journaux et aux sources d'information pour te cultiver.",
+    "Tu as le droit d'exprimer librement ton opinion, tout en respectant celle des autres, de rechercher, de recevoir et de répandre des informations.",
+    "Tu dois être traité à égalité avec les autres enfants, partout dans le mondre, quels que soient ton origine, ton sexe, ta religion, tes opinions, ton handicap, tes croyances ou ta couleur de peau. Vous avez tous les mêmes droits.",
+    "Tu as le droit d'être bien entouré, aimé et de grandir dans un environnement sain et bienveillant."
+  ],
+  [
+    "Droit à la justice",
+    "Droit à la santé",
+    "Droit à la protection",
+    "Droit à l'éducation",
+    "Droit à la liberté d'expression",
+    "Droit à l'égalité",
+    "Droit à une vie familiale"
+  ]
+]
+
+var matchSentence = new matchGame(matcheesSentenceList, matchSentenceElem)
 
 // GAME 3
 var multipleChoiceElem = document.querySelector('#multipleChoice')

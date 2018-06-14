@@ -5,11 +5,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "npm i matchgame",
     "sass": "./node_modules/.bin/node-sass --output ./public/css/ --source-map true --source-map-contents ./src/sass/",
     "pug": "./node_modules/.bin/pug ./src/pug/index.pug --out ./public/ -P",
     "webpack": "npx webpack --mode development --devtool source-map",
-    "pre-start": "./node_modules/.bin/pug ./src/pug/index.pug --out ./public/ && ./node_modules/.bin/node-sass --output-style 'compressed' --output ./public/css/ --source-map true --source-map-contents ./src/sass/ && npx webpack --mode production",
-    "pre-dev": "./node_modules/.bin/pug ./src/pug/index.pug --out ./public/ -P && ./node_modules/.bin/node-sass --output ./public/css/ --source-map true --source-map-contents ./src/sass/ && npx webpack --mode development --devtool source-map",
+    "prestart": "./node_modules/.bin/pug ./src/pug/index.pug --out ./public/ && ./node_modules/.bin/node-sass --output-style 'compressed' --output ./public/css/ --source-map true --source-map-contents ./src/sass/ && npx webpack --mode production",
+    "predev": "./node_modules/.bin/pug ./src/pug/index.pug --out ./public/ -P && ./node_modules/.bin/node-sass --output ./public/css/ --source-map true --source-map-contents ./src/sass/ && npx webpack --mode development --devtool source-map",
     "start": "npx http-server",
     "dev": "npx http-server -S -o"
   },
@@ -27,7 +28,9 @@
   "bugs": {
     "url": "https://github.com/DefenseurDesDroits/PetiteHistoireGrandsDroits/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "matchgame": "file:src/lib/matchgame"
+  },
   "devDependencies": {
     "haikunator": "^2.0.0",
     "http-server": "^0.11.1",
