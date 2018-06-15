@@ -9,6 +9,7 @@
   },
   "main": "index.js",
   "scripts": {
+    "postinstall": "npm run prestart",
     "sass": "npx node-sass --output ./public/css/ --source-map true --source-map-contents ./src/sass/",
     "pug": "npx pug ./src/pug/index.pug --out ./public/ -P",
     "webpack": "npx webpack --mode development --devtool source-map",
@@ -36,6 +37,7 @@
     "node-sass": "^4.9.0",
     "pug-cli": "^1.0.0-alpha6",
     "webpack": "^4.12.0",
-    "webpack-command": "^0.2.1"},
+    "webpack-command": "^0.2.1"
+  },
   "devDependencies": {}
 }

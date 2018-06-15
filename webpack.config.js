@@ -5,5 +5,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'public/js'),
     filename: 'bundle.js'
-  }
+  },
+  plugins: [
+    new UglifyJsPlugin({ sourceMap: true, minimize: true })
+  ]
 };
