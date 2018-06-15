@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "description": "",
+  "engines": {
+    "node": "8.11.3",
+    "npm": "6.0.x"
+  },
   "main": "index.js",
   "scripts": {
     "postinstall": "npm i matchgame",
