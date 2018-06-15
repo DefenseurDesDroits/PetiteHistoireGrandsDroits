@@ -9,11 +9,11 @@
   },
   "main": "index.js",
   "scripts": {
-    "sass": "./node_modules/.bin/node-sass --output ./public/css/ --source-map true --source-map-contents ./src/sass/",
-    "pug": "./node_modules/.bin/pug ./src/pug/index.pug --out ./public/ -P",
+    "sass": "npx node-sass --output ./public/css/ --source-map true --source-map-contents ./src/sass/",
+    "pug": "npx pug ./src/pug/index.pug --out ./public/ -P",
     "webpack": "npx webpack --mode development --devtool source-map",
-    "prestart": "./node_modules/.bin/pug ./src/pug/index.pug --out ./public/ && ./node_modules/.bin/node-sass --output-style 'compressed' --output ./public/css/ --source-map true --source-map-contents ./src/sass/ && npx webpack --mode production",
-    "predev": "./node_modules/.bin/pug ./src/pug/index.pug --out ./public/ -P && ./node_modules/.bin/node-sass --output ./public/css/ --source-map true --source-map-contents ./src/sass/ && npx webpack --mode development --devtool source-map",
+    "prestart": "npx pug ./src/pug/index.pug --out ./public/ && npx node-sass --output-style compressed --output ./public/css/ --source-map true --source-map-contents ./src/sass/ && npx webpack --mode production",
+    "predev": "npx pug ./src/pug/index.pug --out ./public/ -P && npx node-sass --output ./public/css/ --source-map true --source-map-contents ./src/sass/ && npx webpack --mode development --devtool source-map",
     "start": "npx http-server",
     "dev": "npx http-server -S -o"
   },
