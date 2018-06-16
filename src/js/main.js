@@ -1,4 +1,5 @@
 import matchGame from '../lib/matchgame/src/matchgame.js'
+import multiChoice from '../lib/multichoicetest/src/multichoicetest.js'
 import wordPuzzle from '../lib/wordpuzzle/src/wordpuzzle.js'
 
 console.warn("I am self aware")
@@ -63,6 +64,148 @@ var matchSentence = new matchGame(matcheesSentenceList, matchSentenceElem)
 
 // GAME 3
 var multipleChoiceElem = document.querySelector('#multipleChoice')
+var questions = [
+  {
+    question: "Lequel de ces droits est un droit fondamental pour les enfants ?",
+    answers: [
+      {
+        answer: "Le droit d'avoir internet"
+      },
+      {
+        answer: "Le droit d'avoir un prénom et une identité",
+        valid: true
+      },
+      {
+        answer: "Le droit d'avoir de l'argent de poche"
+      }
+    ]
+  },
+  {
+    question: "Pour que les enfants aient tous droit à l'éducation, les États doivent rendre l'enseignement primaire obligatoire et ... ?",
+    answers: [
+      {
+        answer: "Payant"
+      },
+      {
+        answer: "Gratuit",
+        valid: true
+      },
+      {
+        answer: "Facultatif (optionnel, au choix)"
+      }
+    ]
+  },
+  {
+    question: "Tu es dans la cour de ton école, tout le monde joue. C'est super de pouvoir se défouler à la récré ! Un petit groupe d'enfants commence une partie de football... Clémence, une copine de ta classe, veut y jouer aussi. Mais Thomas, Capitaine de l'équipe, lui interdit d'y participer parce que c'est une fille... Quel droit n'est pas respecté ici ?",
+    answers: [
+      {
+        answer: "Le droit à l'égalité",
+        valid: true
+      },
+      {
+        answer: "Le droit à la liberté d'expression"
+      },
+      {
+        answer: "Le droit à l'éducation"
+      }
+    ]
+  },
+  {
+    question: "À l'occasion des vacances scolaires, tu proposes à des amis de vous rassembler pour nettoyer les plages et donc participer à la préservation de l'environnemment. À quel droit ton initiative fait-elle référence ?",
+    answers: [
+      {
+        answer: "Le droit à la participation",
+        valid: true
+      },
+      {
+        answer: "Le droit à l'information"
+      },
+      {
+        answer: "Le droit aux loisirs"
+      }
+    ]
+  },
+  {
+    question: "Qu'est-ce que le droit à la santé",
+    answers: [
+      {
+        answer: "Pouvoir manger de la viande tous les jours"
+      },
+      {
+        answer: "Avoir de bonnes baskets pour faire du sport"
+      },
+      {
+        answer: "Être soigné, bien nourri et avoir accès à l'eau potable",
+        valid: true
+      }
+    ]
+  },
+  {
+    question: "Dans laquelle de ces 3 situations un pays ne respecte-t-il pas la Convention internationale des droits de l'enfant ?",
+    answers: [
+      {
+        answer: "Si des écoliers n'ont pas de goûter"
+      },
+      {
+        answer: "Si toutes les écoles n'ont pas d'ordinateur"
+      },
+      {
+        answer: "Si les enfants n'accèdent pas à l'école",
+        valid: true
+      }
+    ]
+  },
+  {
+    question: "A-t-on le droit de tout dire ?",
+    answers: [
+      {
+        answer: "Oui, sans limite"
+      },
+      {
+        answer: "Oui, dans le respect des autres",
+        valid: true
+      },
+      {
+        answer: "Non, on ne droit rien dire"
+      }
+    ]
+  },
+  {
+    question: "Au collège, le professeur de français organise un débat en classe. D'habitude, tu es toujours d'accord sur tout avec tes amis. Mais cette fois, chacun donne son avis et tu as l'impression de na penser comme les autres. Au moment de t'exprimer, impossible de parler. Le soir après les cours, tu en parles avec Yorick, ton cousin. Il te dit que tu aurais pu enrichir le débat, que tu as le droit de donner ton avis. À quel droit fait-il référence ?",
+    answers: [
+      {
+        answer: "Le droit à la protection"
+      },
+      {
+        answer: "Le droit à la liberté d'expression",
+        valid: true
+      },
+      {
+        answer: "Le droit au repos et aux loisirs"
+      }
+    ]
+  }
+]
+
+var scoreMsgs = [
+  {
+    title: "L'expert",
+    message: "Tu connais parfaitement les droits de l'enfant et tu sais reconnaître une situation qui va à l'envontre de ces droits. Les droits de l'enfant sont fondamentaux alors n'hésite pas à les partager avec tes amis et ton entourage pour qu'ils deviennent des experts comme toi !",
+    scoreThresold: 6
+  },
+  {
+    title: "Le bon connaisseur",
+    message: "Tu as de bonnes conaissances mais il te reste quelques petites choses à savoir. N'hésite pas à partager tes interrogations avec ton entourage car tu as toutes les clés en main pour devenir un expert !",
+    scoreThresold: 3
+  },
+  {
+    title: "Le jeune padawan",
+    message: "Tu es sur la bonne voie et en plein apprentissage des droits de l'enfant. Il t'en reste à découvrir et cela tombe bien, nous sommes là pour t'en parler ! Tous ces petits exercices te permettront d'en savoir plus et d'en parler avec ton entourage !",
+    scoreThresold: 0
+  }
+]
+
+var multiChoiceTest = new multiChoice(questions, scoreMsgs,multipleChoiceElem)
 
 // GAME 4
 var puzzleElem = document.querySelector('#wordsgame')

@@ -4,3 +4,6 @@
 [submodule "src/lib/matchgame"]
 	path = src/lib/matchgame
 	url = https://github.com/ctrlaltdev/matchgame.git
+[submodule "src/lib/multichoicetest"]
+	path = src/lib/multichoicetest
+	url = https://github.com/ctrlaltdev/multichoicetest.git
