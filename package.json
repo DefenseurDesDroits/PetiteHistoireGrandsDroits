@@ -4,8 +4,8 @@
   "private": true,
   "description": "",
   "engines": {
-    "node": "8.11.3",
-    "npm": "6.0.x"
+    "node": ">=8.11.3",
+    "npm": ">=6.0.x"
   },
   "main": "index.js",
   "scripts": {
