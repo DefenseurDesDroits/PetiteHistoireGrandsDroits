@@ -3,12 +3,6 @@ import multiChoice from '../lib/multichoicetest/src/multichoicetest.js'
 import wordPuzzle from '../lib/wordpuzzle/src/wordpuzzle.js'
 
 console.warn("I am self aware")
-
-window.ontouchstart = function(e){
-  e.preventDefault()
-  e.stopPropagation()
-}
-
 // GAME 1
 var matchImgElem = document.querySelector('#matchImg')
 
@@ -264,6 +258,12 @@ var wordGame = new wordPuzzle(words, puzzleElem, wordListElem, {
   maxAttempts: 100,
   preferOverlap: false
 })
+
+puzzleElem.ontouchstart = function(e){
+  e.preventDefault()
+  e.stopPropagation()
+}
+
 
 // INCOWEB
 document.querySelector('#incoweb').addEventListener('click', () => {
