@@ -4,6 +4,11 @@ import wordPuzzle from '../lib/wordpuzzle/src/wordpuzzle.js'
 
 console.warn("I am self aware")
 
+window.ontouchstart = function(e){
+  e.preventDefault()
+  e.stopPropagation()
+}
+
 // GAME 1
 var matchImgElem = document.querySelector('#matchImg')
 
@@ -209,6 +214,7 @@ var multiChoiceTest = new multiChoice(questions, scoreMsgs,multipleChoiceElem)
 
 // GAME 4
 var puzzleElem = document.querySelector('#wordsgame')
+var wordListElem = document.querySelector('#wordslist ul')
 var words = [
   'amour',
   'avis',
@@ -250,7 +256,7 @@ var words = [
   'vie'
 ]
 
-var wordGame = new wordPuzzle(words, puzzleElem, {
+var wordGame = new wordPuzzle(words, puzzleElem, wordListElem, {
   lang: 'FR',
   orientations: ['horizontal', 'vertical'],
   height: 20,
