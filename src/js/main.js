@@ -17,13 +17,13 @@ var matcheesImgList = [
     "Le droit à la justice"
   ],
   [
-    "https://via.placeholder.com/150x50?text=FAMILLE",
-    "https://via.placeholder.com/150x50?text=EXPRESSION",
-    "https://via.placeholder.com/150x50?text=EGALITE",
-    "https://via.placeholder.com/150x50?text=SANTE",
-    "https://via.placeholder.com/150x50?text=EDUC",
-    "https://via.placeholder.com/150x50?text=PROTEC",
-    "https://via.placeholder.com/150x50?text=JUSTICE"
+    "img/family.svg",
+    "img/expression.svg",
+    "https://via.placeholder.com/150x150?text=EGALITE",
+    "https://via.placeholder.com/150x150?text=SANTE",
+    "img/education.svg",
+    "img/protection.svg",
+    "https://via.placeholder.com/150x150?text=JUSTICE"
   ]
 ]
 

@@ -9,6 +9,7 @@ body
 body
 	line-height: 1.2
 	font-size: 1.2em
+	background-color: coral
 
 .flow
 	max-width: 800px
@@ -20,6 +21,33 @@ section
 
 p
 	margin: 20px 0
+
+header
+	.banner
+		display: grid
+		grid-template: auto / 160px auto
+		margin-bottom: 40px
+		#logo
+			grid-column: 1 / 2
+			justify-self: flex-start
+			width: 160px
+			height: 160px
+		.social
+			grid-colum: 2 / 3
+			justify-self: flex-end
+			ul
+				display: flex
+			li
+				flex: 0 1 auto
+				margin: 20px 10px
+			img
+				height: 30px
+				width: auto
+
+	h1
+		text-align: center
+	p.subtitle
+		text-align: center
 
 @import matchgame
 @import multichoice
