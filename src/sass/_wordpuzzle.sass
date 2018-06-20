@@ -2,16 +2,21 @@
   max-width: 100%
 
   div
+    display: flex
     width: 100%
     margin: 0 auto
 
-  .puzzleSquare 
+  .puzzleSquare
+    flex: 1 1 auto
     text-transform: uppercase
     border: 0
-    height: 25px
+    height: 15px
     width: calc(100% / 25)
-    font: 18px sans-serif
+    font: 14px sans-serif
     background-color: transparent
+    @media (min-width: 450px)
+      height: 25px
+      font: 18px sans-serif
     
   button::-moz-focus-inner 
     border: 0
