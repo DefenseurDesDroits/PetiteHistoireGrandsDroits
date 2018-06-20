@@ -10,17 +10,29 @@ body
 	line-height: 1.2
 	font-size: 1.2em
 	background-color: coral
+	background: linear-gradient(#5E354E, #ED6E44, #FABA5C, #FFFFFF)
 
 .flow
 	max-width: 800px
 	box-sizing: border-box
 	margin: 0 auto
 
-section
-	margin: 40px 0
-
 p
 	margin: 20px 0
+
+img#leavesLeft,
+img#leavesRight
+	position: absolute
+	top: 0
+	z-index: -200
+	width: auto
+	height: 120vh
+img#leavesLeft
+	left: 0
+img#leavesRight
+	right: 0
+	transform: scaleX(-1)
+  filter: FlipH
 
 header
 	.banner
@@ -55,3 +67,54 @@ header
 
 #incoweb
 	cursor: pointer
+
+#DDD
+
+#downloads,
+#radio
+	background-color: #FDC743
+
+#downloads
+	margin-top: 150px
+	padding-bottom: 40px
+	border-top: 1px solid 
+	border-image: url("../img/sand.png") 100% 0 100% / auto / 139px 
+
+#radio
+	padding-bottom: 100px
+
+footer
+	padding: 40px 0
+	background-color: #E35014
+	border-top: 1px solid 
+	border-image: url("../img/footer.png") 100% 0 100% / auto / 78px stretch
+	.grid
+		display: grid
+		grid-template: auto / 302px auto
+		grid-column-gap: 80px
+		img#signature
+			grid-column: 1 / 2
+			width: 302px
+			height: auto
+		.links
+			grid-column: 2 / 3
+			ul.social
+				display: flex
+				li
+					flex: 0 1 auto
+					margin-right: 20px
+					img
+						height: 30px
+						width: auto
+			ul#links
+				display: flex
+				li
+					flex: 0 1 auto
+					padding-right: 10px
+					margin-right: 10px
+					border-right: 1px solid white
+					color: white
+					a
+						color: white
+				li:last-of-type
+					border-color: transparent

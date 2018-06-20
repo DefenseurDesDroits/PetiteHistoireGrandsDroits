@@ -7,11 +7,11 @@
 
   .puzzleSquare 
     text-transform: uppercase
-    background-color: white
     border: 0
     height: 25px
     width: calc(100% / 25)
     font: 18px sans-serif
+    background-color: transparent
     
   button::-moz-focus-inner 
     border: 0
@@ -46,28 +46,6 @@
     text-decoration: line-through
     color: gray
 
-  #controls 
-    display: inline-block
-    max-width: 30rem
-    padding: 1em
-    border: none
-    text-align: left
-
-  label 
-    white-space: nowrap
-    margin-top: 1em
-
-  input 
-    border: none
-    border-bottom: 1px solid #ccc
-    font-size: 1em
-
-  input[type="number"] 
-    width: 2rem
-
-  select 
-    max-width: 10rem
-
   #create-grid,
   #solve 
     display: block
@@ -75,7 +53,6 @@
 
   #secret-word 
     text-transform: uppercase
-
 
   #result-message 
     font-size: 1.2em
