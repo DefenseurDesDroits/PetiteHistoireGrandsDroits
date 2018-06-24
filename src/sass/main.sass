@@ -1,14 +1,20 @@
 // main.sass
 @import reset
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Pacifico')
+
+// @VARS
+$bodyfont: 'Open Sans', sans-serif
+$headingfont: 'Pacifico', cursive
+
 // @GLOBAL
 html,
 body
 	font-size: 10px
+	font-family: $bodyfont
 
 body
 	line-height: 1.2
-	font-size: 1.2em
 	background-color: coral
 	background: linear-gradient(#5E354E, #ED6E44, #FABA5C, #FFFFFF)
 
@@ -17,8 +23,33 @@ body
 	box-sizing: border-box
 	margin: 0 auto
 
+h1, h2, h3, h4, h5, h6
+	font-family: $headingfont
+
+h1
+	text-align: center
+	color: white
+	font-size: 6em
+
+h2
+	font-size: 3em
+	color: white
+	a
+		color: white
+		border-bottom: 1px dotted white
+
+h3
+	font-size: 2em
+
 p
+	font-size: 1.2em
 	margin: 20px 0
+
+label
+	font-size: 1.2em
+
+li
+	font-size: 1.4em
 
 img#leavesLeft,
 img#leavesRight
@@ -56,10 +87,9 @@ header
 				height: 30px
 				width: auto
 
-	h1
-		text-align: center
-	p.subtitle
-		text-align: center
+	section#uptoyou
+		p
+			color: white
 
 @import matchgame
 @import multichoice
