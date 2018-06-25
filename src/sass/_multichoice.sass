@@ -1,3 +1,40 @@
 #multipleChoice
   fieldset
     margin: 20px 0
+  .multiChoiceAnswer
+    margin: 5px 0
+  input[type="radio"]
+    display: none
+  input[type="radio"]
+    + label
+      position: relative
+      top: 3px
+      display: inline-block
+      border-radius: 20px
+      width: 20px
+      height: 20px
+      margin-right: 10px
+      border: 2px solid #FBFCFC
+      font-size: 20px
+      text-align: center
+      line-height: 20px
+      &::after
+        content: "·"
+        color: transparent
+    &.correct + label
+      border-color: $lightblue
+      &::after
+        content: "✔"
+        color: $lightblue
+    &.wrong + label
+      border-color: $orange
+      &::after
+        content: "✖"
+        color: $orange
+    ~ label
+      cursor: pointer
+  .scoreMsg
+    .msgTitle
+      font-family: $headingfont
+      font-size: 3em
+      color: $lightblue

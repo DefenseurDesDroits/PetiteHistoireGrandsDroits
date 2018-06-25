@@ -60,6 +60,15 @@ var matcheesSentenceList = [
 ]
 
 var matchSentence = new matchGame(matcheesSentenceList, matchSentenceElem)
+let matchSentenceElemSizes = []
+let matchSentenceElemLi = matchSentenceElem.querySelectorAll('li');
+[].forEach.call(matchSentenceElemLi, (li) => {
+  matchSentenceElemSizes.push(li.clientHeight)
+})
+matchSentenceElemSizes.sort((a, b) => b - a);
+[].forEach.call(matchSentenceElemLi, (li) => {
+  li.style.height = matchSentenceElemSizes[0] + 'px'
+})
 
 // GAME 3
 var multipleChoiceElem = document.querySelector('#multipleChoice')
@@ -257,6 +266,23 @@ var wordGame = new wordPuzzle(words, puzzleElem, wordListElem, {
   width: 25,
   maxAttempts: 100,
   preferOverlap: false
+})
+
+// CHECKBOXES AND RADIOS
+let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+[].forEach.call(checkboxes, (checkbox) => {
+  let id = checkbox.id
+  let label = document.createElement('label')
+  label.setAttribute('for', id)
+  checkbox.parentNode.insertBefore(label, checkbox.nextSibling)
+})
+
+let radios = document.querySelectorAll('input[type="radio"]');
+[].forEach.call(radios, (radio) => {
+  let id = radio.id
+  let label = document.createElement('label')
+  label.setAttribute('for', id)
+  radio.parentNode.insertBefore(label, radio.nextSibling)
 })
 
 // INCOWEB
