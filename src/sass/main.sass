@@ -7,10 +7,15 @@
 $bodyfont: 'Open Sans', sans-serif
 $headingfont: 'Pacifico', cursive
 
+$lightblue: #00ACA5
+$darkblue: #282E5E
+$orange: #E35014
+
 // @GLOBAL
 html,
 body
 	font-size: 10px
+	color: $darkblue
 	font-family: $bodyfont
 
 body
@@ -19,17 +24,24 @@ body
 	background: linear-gradient(#5E354E, #ED6E44, #FABA5C, #FFFFFF)
 
 .flow
-	max-width: 800px
+	max-width: 840px
 	box-sizing: border-box
 	margin: 0 auto
+	padding: 0 20px
 
 h1, h2, h3, h4, h5, h6
 	font-family: $headingfont
+	margin: 40px 0 10px
+	span
+		display: inline-block
 
 h1
 	text-align: center
 	color: white
 	font-size: 6em
+	span
+		color: $darkblue
+		text-transform: uppercase
 
 h2
 	font-size: 3em
@@ -44,6 +56,12 @@ h3
 p
 	font-size: 1.2em
 	margin: 20px 0
+p:first-of-type
+	margin-top: 40px
+p:last-of-type
+	margin-bottom: 40px
+p.instructions
+	margin: 10px 0 20px
 
 label
 	font-size: 1.2em
@@ -51,8 +69,11 @@ label
 li
 	font-size: 1.4em
 
-img#leavesLeft,
-img#leavesRight
+.owl
+	width: 80px
+	height: auto
+
+img.leaves
 	position: absolute
 	top: 0
 	z-index: -200
@@ -95,8 +116,54 @@ header
 @import multichoice
 @import wordpuzzle
 
+#game1
+	h2
+		span
+			color: $lightblue
+
+#contestForm
+	margin: 40px 0
+	fieldset
+		margin: 20px 0
+	textarea
+		max-width: 100%
+		width: 100%
+		min-height: 200px
+		padding: 20px
+		resize: vertical
+		box-sizing: border-box
+	input,
+	textarea
+		background-color: transparent
+		border-radius: 5px
+		border: 1px solid $darkblue
+	input
+		padding: 3px 20px
+	input[type="submit"]
+		color: white
+		font-family: $headingfont
+		font-size: 1.4em
+		background-color: $lightblue
+		border-radius: 10px
+		cursor: pointer
+		border: none
+	#contactInfo
+		display: flex
+		flex-flow: row wrap
+		justify-content: center
+		input
+			flex: 1 0 calc(100% / 3 - 62px)
+			margin: 10px
+
 #incoweb
-	cursor: pointer
+	.flow
+		cursor: pointer
+
+#incoweb,
+#topito
+	img
+		width: 100%
+		height: auto
 
 #DDD
 

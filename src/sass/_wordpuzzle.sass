@@ -1,6 +1,12 @@
 #wordsgame
   max-width: 100%
-
+  padding: 20px
+  border: 1px solid #FBFCFC
+  border-image-source: url("../img/smoke.png")
+  border-image-slice: 20 fill
+  border-image-width: 20px
+  border-image-outset: 20px
+  border-image-repeat: stretch
   div
     display: flex
     width: 100%
@@ -22,10 +28,10 @@
     border: 0
 
   .selected 
-    background-color: orange
+    background-color: $orange
 
   .found 
-    background-color: blue
+    background-color: $lightblue
     color: white
 
   .solved 

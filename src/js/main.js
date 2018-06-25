@@ -260,6 +260,6 @@ var wordGame = new wordPuzzle(words, puzzleElem, wordListElem, {
 })
 
 // INCOWEB
-document.querySelector('#incoweb').addEventListener('click', () => {
+document.querySelector('#incoweb .flow').addEventListener('click', () => {
   window.open('http://incoweb.playbac.fr/indexhtml.php5?livret=74', 'EVENTAIL_PLAYBAC', 'height=700, width=900, toolbar=no, menubar=no, scrollbars=yes, resizable=no, location=no, directories=no, status=no')
 })
