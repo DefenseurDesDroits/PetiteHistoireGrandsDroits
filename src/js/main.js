@@ -289,3 +289,34 @@ let radios = document.querySelectorAll('input[type="radio"]');
 document.querySelector('#incoweb .flow').addEventListener('click', () => {
   window.open('http://incoweb.playbac.fr/indexhtml.php5?livret=74', 'EVENTAIL_PLAYBAC', 'height=700, width=900, toolbar=no, menubar=no, scrollbars=yes, resizable=no, location=no, directories=no, status=no')
 })
+
+// SCROLL LEAVES
+var last_known_scroll_position = 0
+var bodyHeigth = document.querySelector('body').clientHeight
+var leavesHeigth = document.querySelector('#leavesLeft').clientHeight
+var ticking = false
+
+function topLeaves(scroll_pos) {
+  let topOffset = leavesHeigth * scroll_pos / bodyHeigth
+  let leaves = document.querySelectorAll('.leaves');
+  [].forEach.call(leaves, (leaf) => {
+    leaf.style.top = - topOffset + 'px'
+  })
+}
+
+window.addEventListener('scroll', () => {
+  last_known_scroll_position = window.scrollY;
+
+  if (!ticking) {
+    window.requestAnimationFrame(function() {
+      topLeaves(last_known_scroll_position)
+      ticking = false
+    })
+    ticking = true
+  }
+})
+
+window.addEventListener('resize', () => {
+  bodyHeigth = document.querySelector('body').clientHeight
+  leavesHeigth = document.querySelector('#leavesLeft').clientHeight
+})
