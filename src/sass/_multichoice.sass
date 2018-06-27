@@ -1,8 +1,14 @@
 #multipleChoice
   fieldset
-    margin: 20px 0
+    margin: 40px 0
+    > label
+      color: white
+      font-family: $headingfont
+      font-size: 3em
   .multiChoiceAnswer
-    margin: 5px 0
+    margin: 10px 0
+    &:first-of-type
+      margin-top: 20px
   input[type="radio"]
     display: none
   input[type="radio"]
@@ -10,31 +16,39 @@
       position: relative
       top: 3px
       display: inline-block
-      border-radius: 20px
+      background:  no-repeat center / contain url('../img/starfish.svg')
       width: 20px
       height: 20px
       margin-right: 10px
-      border: 2px solid #FBFCFC
       font-size: 20px
+      color: $darkblue
       text-align: center
-      line-height: 20px
       &::after
         content: "·"
         color: transparent
+    ~ label
+      font-family: $headingfont
+      font-size: 2.4em
+      color: $darkblue
+      line-height: 20px
     &.correct + label
+      background-image: url('../img/starfish-correct.svg')
+    &.correct ~ label
       border-color: $lightblue
-      &::after
-        content: "✔"
-        color: $lightblue
+      color: $lightblue
     &.wrong + label
+      background-image: url('../img/starfish-wrong.svg')
+    &.wrong ~ label
       border-color: $orange
-      &::after
-        content: "✖"
-        color: $orange
+      color: $orange
     ~ label
       cursor: pointer
   .scoreMsg
+    max-width: 80%
+    margin: 0 auto 80px
     .msgTitle
       font-family: $headingfont
       font-size: 3em
       color: $lightblue
+    p
+      font-size: 1.4em

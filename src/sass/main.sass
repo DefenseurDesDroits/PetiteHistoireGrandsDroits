@@ -1,10 +1,10 @@
 // main.sass
 @import reset
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Pacifico')
+@import url('https://fonts.googleapis.com/css?family=Roboto|Pacifico')
 
 // @VARS
-$bodyfont: 'Open Sans', sans-serif
+$bodyfont: 'Roboto', sans-serif
 $headingfont: 'Pacifico', cursive
 
 $lightblue: #00ACA5
@@ -20,8 +20,8 @@ body
 
 body
 	line-height: 1.2
-	background-color: coral
-	background: linear-gradient(#5E354E, #ED6E44, #FABA5C, #FFFFFF)
+	background-color: #FDC743
+	//background: linear-gradient(#8A4E72, #ED6E44, #FABA5C, #FFFFFF)
 
 .flow
 	max-width: 840px
@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6
 	font-family: $headingfont
 	margin: 40px 0 10px
 	span
-		display: inline-block
+		display: block
 
 h1
 	text-align: center
@@ -42,6 +42,9 @@ h1
 	span
 		color: $darkblue
 		text-transform: uppercase
+		img
+			width: 100%
+			height: auto
 
 h2
 	font-size: 3em
@@ -117,6 +120,15 @@ header
 @import wordpuzzle
 
 #game1
+	h2
+		span
+			color: $lightblue
+
+#game3
+	h2
+    color: $lightblue
+
+#contest
 	h2
 		span
 			color: $lightblue
