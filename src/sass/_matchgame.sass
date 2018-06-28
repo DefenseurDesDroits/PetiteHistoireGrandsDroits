@@ -1,7 +1,7 @@
 #matchImg,
 #matchSentence
   display: grid
-  grid-template: auto / repeat(2, 50%)
+  grid-template: auto / repeat(2, auto)
   grid-column-gap: 20px
 
   ul
@@ -15,7 +15,6 @@
       display: flex;
       justify-content: center
       flex-direction: column
-      padding: 10px 20px
       cursor: pointer
       color: white
       font-size: 1.4em
@@ -38,9 +37,13 @@
     &:first-of-type
       grid-column: 1 / 2
       justify-self: end
+      li
+        padding: 10px 10px 10px 0
     &:nth-of-type(2)
       grid-column: 2 / 3
       justify-self: start
+      li
+        padding: 10px 0 10px 10px
 
 #matchSentence
   ul:first-of-type

@@ -260,7 +260,7 @@ var words = [
 ]
 
 function initWordGame() {
-  if (window.innerWidth <= 450) {
+  if (window.innerWidth <= 650) {
     var wordGame = new wordPuzzle(words, puzzleElem, wordListElem, {
       lang: 'FR',
       orientations: ['horizontal', 'vertical'],
@@ -335,5 +335,4 @@ window.addEventListener('scroll', () => {
 window.addEventListener('resize', () => {
   bodyHeigth = document.querySelector('body').clientHeight
   leavesHeigth = document.querySelector('#leavesLeft').clientHeight
-  initWordGame()
 })
