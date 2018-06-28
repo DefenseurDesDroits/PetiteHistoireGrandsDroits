@@ -76,7 +76,7 @@ li
 	font-size: 1.4em
 
 .owl
-	width: 80px
+	width: 120px
 	height: auto
 
 img.leaves
@@ -90,7 +90,7 @@ img#leavesLeft
 img#leavesRight
 	right: 0
 	transform: scaleX(-1)
-  filter: FlipH
+	filter: FlipH
 @media (min-width: 800px)
 	img.leaves
 		height: 120vh
@@ -106,7 +106,7 @@ header
 			width: 160px
 			height: 160px
 		.social
-			grid-colum: 2 / 3
+			grid-column: 2 / 3
 			justify-self: flex-end
 			ul
 				display: flex
@@ -120,6 +120,14 @@ header
 	section#uptoyou
 		p
 			color: white
+
+.imgIllus
+	display: flex
+	img
+		flex: 1 1 120px
+	.contentIllus
+		margin-left: 40px
+		flex: 1 1 auto
 
 @import matchgame
 @import multichoice
