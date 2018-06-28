@@ -23,6 +23,9 @@ body
 	background-color: #FDC743
 	//background: linear-gradient(#8A4E72, #ED6E44, #FABA5C, #FFFFFF)
 
+main
+	margin-bottom: 100px
+
 .flow
 	max-width: 840px
 	box-sizing: border-box
@@ -81,13 +84,16 @@ img.leaves
 	top: 0
 	z-index: -200
 	width: auto
-	height: 120vh
+	height: 80vh
 img#leavesLeft
 	left: 0
 img#leavesRight
 	right: 0
 	transform: scaleX(-1)
   filter: FlipH
+@media (min-width: 800px)
+	img.leaves
+		height: 120vh
 
 header
 	.banner
@@ -129,14 +135,37 @@ header
     color: $lightblue
 
 #contest
+	padding-bottom: 60px
 	h2
 		span
 			color: $lightblue
 
 #contestForm
-	margin: 40px 0
+	border: 40px solid
+	border-image-source: url("../img/smoke.svg")
+	border-image-slice: 100 fill
+	border-image-width: 6em
+	border-image-outset: 4em 4em 10em
+	margin: 80px 0
 	fieldset
 		margin: 20px 0
+	#submit
+		margin: 0
+		text-align: center
+	#consent
+		display: flex
+		flex-flow: row nowrap
+		width: 80%
+		margin: 20px auto
+		input
+			margin-right: 20px
+		label
+			display: inline-block
+		input,
+		label
+			flex: 1 1 auto
+		input > label
+			display: none
 	textarea
 		max-width: 100%
 		width: 100%
@@ -176,21 +205,87 @@ header
 	img
 		width: 100%
 		height: auto
-
+#competence,
+#mission,
+#whocanfile,
 #DDD
+	ul
+		list-style: disc inside
+		padding-left: 1.2em
+		margin: 40px 0
+		li
+			font-size: 1.2em
+			margin-bottom: 1.2em
 
+#extra .flow
+	display: grid
+	grid-template: auto auto / auto
+	row-gap: 20px
 #downloads,
 #radio
-	background-color: #FDC743
+	h2
+		margin-bottom: 40px
+		img
+			vertical-align: middle
+			height: 80px
+			width: auto
+			margin-right: 10px
 
 #downloads
-	margin-top: 150px
-	padding-bottom: 40px
-	border-top: 1px solid 
-	border-image: url("../img/sand.png") 100% 0 100% / auto / 139px 
+	grid-row: 1 / 2
+	ul
+		padding-left: 1.4em
+	li
+		margin-bottom: 1.4em
+		&:before
+			content: ''
+			display: inline-block
+			height: 1.4em
+			width: 1.4em
+			background-image: url('../img/download.svg')
+			background-size: contain
+			background-repeat: no-repeat
+			margin-right: 0.7em
+		a
+			color: $darkblue
+			font-size: 1.4em
 
 #radio
-	padding-bottom: 100px
+	grid-row: 2 / 3
+
+@media (min-width: 800px)
+	#extra .flow
+		grid-template: auto / 50% 50%
+		column-gap: 20px
+	#downloads
+		grid-row: 1 / 2
+		grid-column: 1 / 2
+	#radio
+		grid-row: 1 / 2
+		grid-column: 2 / 3
+
+hr
+	margin: 40px auto
+	&.sep
+		max-width: 800px
+		border-top: 20px solid 
+		border-image-source: url("../img/separator.svg")
+		border-image-slice: 20 0
+		border-image-width: 10em
+		border-image-outset: 2em
+	&.sepalt
+		max-width: 250px
+		border-top: 40px solid
+		border-image-source: url("../img/separator-alt.svg")
+		border-image-slice: 40 0
+		border-image-width: 10em
+		border-image-outset: 2em
+
+@media (min-width: 800px)
+	hr
+		&.sep
+			border-top: 40px solid 
+			border-image-slice: 40 0
 
 footer
 	padding: 40px 0
@@ -199,14 +294,14 @@ footer
 	border-image: url("../img/footer.png") 100% 0 100% / auto / 78px stretch
 	.grid
 		display: grid
-		grid-template: auto / 302px auto
-		grid-column-gap: 80px
+		grid-template: auto auto / auto
+		grid-row-gap: 20px
 		img#signature
-			grid-column: 1 / 2
+			grid-row: 1 / 2
 			width: 302px
 			height: auto
 		.links
-			grid-column: 2 / 3
+			grid-row: 2 / 3
 			ul.social
 				display: flex
 				li
@@ -227,3 +322,13 @@ footer
 						color: white
 				li:last-of-type
 					border-color: transparent
+	@media (min-width: 800px)
+		.grid
+			grid-template: auto / 302px auto
+			grid-column-gap: 80px
+			img#signature
+				grid-column: 1 / 2
+				grid-row: 1 / 2
+			.links
+				grid-column: 2 / 3
+				grid-row: 1 / 2

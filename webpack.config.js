@@ -5,5 +5,11 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'public/js'),
     filename: 'bundle.js'
+  },
+  node: {
+    'dns': 'empty',
+    'fs': 'empty',
+    'tls': 'empty',
+    'net': 'empty'
   }
 };

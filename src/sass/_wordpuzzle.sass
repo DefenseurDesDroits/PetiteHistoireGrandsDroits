@@ -11,9 +11,10 @@
     border: 0
     height: 14px
     width: calc(100% / 25)
-    font: 12px sans-serif
+    font: 12px $bodyfont
     background-color: transparent
     color: $darkblue
+    padding: 0
     @media (min-width: 450px)
       height: 25px
       font: 18px sans-serif
@@ -40,9 +41,11 @@
   text-align: left
   -moz-column-count: 4
   -webkit-column-count: 4
-  column-count: 4
+  column-count: 3
   column-gap: 20px
   margin-top: 20px
+  @media (min-width: 450px)
+    column-count: 4
   li 
     font: 1.2em $bodyfont
     text-transform: uppercase
