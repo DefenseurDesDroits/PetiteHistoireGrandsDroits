@@ -259,14 +259,29 @@ var words = [
   'vie'
 ]
 
-var wordGame = new wordPuzzle(words, puzzleElem, wordListElem, {
-  lang: 'FR',
-  orientations: ['horizontal', 'vertical'],
-  height: 20,
-  width: 25,
-  maxAttempts: 100,
-  preferOverlap: false
-})
+function initWordGame() {
+  if (window.innerWidth <= 450) {
+    var wordGame = new wordPuzzle(words, puzzleElem, wordListElem, {
+      lang: 'FR',
+      orientations: ['horizontal', 'vertical'],
+      height: 30,
+      width: 15,
+      maxAttempts: 100,
+      preferOverlap: false
+    })
+  } else {
+    var wordGame = new wordPuzzle(words, puzzleElem, wordListElem, {
+      lang: 'FR',
+      orientations: ['horizontal', 'vertical'],
+      height: 20,
+      width: 25,
+      maxAttempts: 100,
+      preferOverlap: false
+    })
+  }
+}
+
+initWordGame()
 
 // CHECKBOXES AND RADIOS
 let checkboxes = document.querySelectorAll('input[type="checkbox"]');
@@ -291,7 +306,7 @@ document.querySelector('#incoweb .flow').addEventListener('click', () => {
 })
 
 // SCROLL LEAVES
-var last_known_scroll_position = 0
+var last_known_scroll_position = window.scrollY
 var bodyHeigth = document.querySelector('body').clientHeight
 var leavesHeigth = document.querySelector('#leavesLeft').clientHeight
 var ticking = false
@@ -303,9 +318,10 @@ function topLeaves(scroll_pos) {
     leaf.style.top = - topOffset + 'px'
   })
 }
+topLeaves(last_known_scroll_position)
 
 window.addEventListener('scroll', () => {
-  last_known_scroll_position = window.scrollY;
+  last_known_scroll_position = window.scrollY
 
   if (!ticking) {
     window.requestAnimationFrame(function() {
@@ -319,4 +335,5 @@ window.addEventListener('scroll', () => {
 window.addEventListener('resize', () => {
   bodyHeigth = document.querySelector('body').clientHeight
   leavesHeigth = document.querySelector('#leavesLeft').clientHeight
+  initWordGame()
 })
