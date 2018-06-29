@@ -7,7 +7,7 @@ section#contest
     p Envoie-nous ta petite histoire des grands droits, une histoire que tu inventes sur les droits de l'enfant. Cela peut être drôle ou sérieux, l'important c'est de s'amuser en écrivant !
     p L'auteur de la meilleure histoire, envoyée avant le 31 août 2018, sera invité à Paris pour enregistrer le prochain spot radio du Défenseur des droits.
 
-    form#contestForm
+    form#contestForm(method="POST" action="http://localhost:3000")
       fieldset#contactInfo
         input(type="text", placeholder="Prénom", name="firstname", required)
         input(type="text", placeholder="Nom", name="lastname", required)

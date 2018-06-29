@@ -19,7 +19,7 @@ body
 	font-family: $bodyfont
 
 body
-	line-height: 1.2
+	line-height: 1.4
 	background-color: #FDC743
 	background: linear-gradient(#8A4E72 0%, #ED6E44 5%, #FABA5C 10%, #FDC743)
 
@@ -51,11 +51,11 @@ h1
 		height: auto
 
 h2
-	font-size: 3em
+	font-size: 3.4em
 	color: white
 
 h3
-	font-size: 2em
+	font-size: 2.6em
 
 p
 	font-size: 1.4em
@@ -69,8 +69,11 @@ p.instructions
 	text-align: center
 	margin: 10px 0 20px
 
+section
+	margin: 60px 0
+
 label
-	font-size: 1.2em
+	font-size: 1.4em
 
 li
 	font-size: 1.4em
@@ -95,6 +98,8 @@ img#leavesRight
 	filter: FlipH
 
 header
+	.flow
+		max-width: 1200px
 	.banner
 		display: grid
 		grid-template: auto / 160px auto
@@ -116,12 +121,13 @@ header
 				height: 30px
 				width: auto
 
-	section#uptoyou
-		p
-			text-align: center
-			color: white
-			&.tagline
-				font-family: $headingfont
+section#uptoyou
+	p
+		text-align: center
+		color: white
+		margin: 10px 0 20px
+		&.tagline
+			font-family: $headingfont
 
 .imgIllus
 	display: flex
@@ -172,17 +178,14 @@ header
 		margin: 0
 		text-align: center
 	#consent
-		display: flex
-		flex-flow: row nowrap
 		width: 80%
 		margin: 20px auto
 		input
 			margin-right: 20px
-		label
-			display: inline-block
-		input,
-		label
-			flex: 1 1 auto
+			height: 80px
+			float: left
+			@media (min-width: 650px)
+				height: 40px
 		input > label
 			display: none
 	textarea
@@ -208,12 +211,16 @@ header
 		cursor: pointer
 		border: none
 	#contactInfo
-		display: flex
-		flex-flow: row wrap
-		justify-content: center
 		input
-			flex: 1 0 calc(100% / 3 - 62px)
 			margin: 10px
+			width: calc(100% / 2 - 22px)
+			box-sizing: border-box
+			&:last-of-type
+				width: calc(100% - 22px)
+			@media (min-width: 650px)
+				width: calc(100% / 3 - 22px)
+				&:last-of-type
+					width: calc(100% / 3 - 22px)
 
 #incoweb
 	.flow
@@ -241,17 +248,17 @@ header
 		color: $lightblue
 	.standalone > a
 		color: $lightblue
-		font-size: 1.2em
+		font-size: 1.4em
 		border-bottom: 1px solid $lightblue
 		font-family: $headingfont
 	ul
 		padding-left: 40px
 		margin: 40px 0
 		column-count: 2
-		column-gap: 40px
+		column-gap: 80px
 		li
-			font-size: 1.2em
-			margin-bottom: 1.2em
+			font-size: 1.4em
+			margin-bottom: 1.4em
 			position: relative
 			&:before
 				position: absolute
@@ -270,11 +277,12 @@ header
 	row-gap: 20px
 #downloads,
 #radio
+	margin-top: 0
 	h2
 		margin-bottom: 40px
 		img
 			vertical-align: middle
-			height: 80px
+			height: 40px
 			width: auto
 			margin-right: 10px
 
@@ -317,14 +325,15 @@ hr
 		max-width: 800px
 		border-top: 20px solid 
 		border-image-source: url("../img/separator.svg")
-		border-image-slice: 20 0
+		border-image-slice: 20 0 fill
 		border-image-width: 10em
 		border-image-outset: 2em
 	&.sepalt
+		margin: 40px auto 80px
 		max-width: 250px
 		border-top: 40px solid
 		border-image-source: url("../img/separator-alt.svg")
-		border-image-slice: 40 0
+		border-image-slice: 40 0 fill
 		border-image-width: 10em
 		border-image-outset: 2em
 
@@ -332,7 +341,7 @@ hr
 	hr
 		&.sep
 			border-top: 40px solid 
-			border-image-slice: 40 0
+			border-image-slice: 40 0 fill
 
 footer
 	padding: 40px 0

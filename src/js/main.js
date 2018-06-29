@@ -336,3 +336,17 @@ window.addEventListener('resize', () => {
   bodyHeigth = document.querySelector('body').clientHeight
   leavesHeigth = document.querySelector('#leavesLeft').clientHeight
 })
+
+// CONTEST
+
+let contestForm = document.querySelector('#contestForm')
+contestForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+  e.stopPropagation()
+  let xhr = new XMLHttpRequest()
+  xhr.onload = () => { console.log(xhr.responseText) } // success case
+  xhr.onerror = () => { console.warn(xhr.responseText) } // failure case
+  xhr.open ('POST', 'https://localhost:3000', true)
+  xhr.send (new FormData (contestForm))
+  return false
+})
