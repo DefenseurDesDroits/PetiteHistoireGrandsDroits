@@ -16,11 +16,12 @@
       justify-content: center
       flex-direction: column
       cursor: pointer
-      color: white
+      color: $darkblue
       font-size: 1.4em
       opacity: 0.8
       &.selected
         opacity: 1
+        text-decoration: underline
         img
           opacity: 1
       &.found
@@ -31,14 +32,29 @@
           opacity: 1
       &:hover
         opacity: 1
+        text-decoration: underline
         img
           opacity: 1
 
     &:first-of-type
       grid-column: 1 / 2
       justify-self: end
+      padding-left: 40px
       li
+        position: relative
         padding: 10px 10px 10px 0
+        &:before
+          position: absolute
+          left: -40px
+          content: ''
+          display: inline-block
+          height: 20px
+          width: 20px
+          background-image: url('../img/starfish-darkblue.svg')
+          background-size: contain
+          background-repeat: no-repeat
+        &.found:before
+          background-image: url('../img/starfish-lightblue.svg')
     &:nth-of-type(2)
       grid-column: 2 / 3
       justify-self: start
@@ -52,13 +68,13 @@
         text-decoration: none
   ul:last-of-type
     li
+      color: $orange
       font-family: $headingfont
       font-size: 2em
 
 #matchImg
   li
     height: 100px
-    line-height: 100px
     font-size: 2em
     align-self: center
     font-family: $headingfont

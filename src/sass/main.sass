@@ -21,13 +21,13 @@ body
 body
 	line-height: 1.2
 	background-color: #FDC743
-	//background: linear-gradient(#8A4E72, #ED6E44, #FABA5C, #FFFFFF)
+	background: linear-gradient(#8A4E72 0%, #ED6E44 5%, #FABA5C 10%, #FDC743)
 
 main
 	margin-bottom: 100px
 
 .flow
-	max-width: 840px
+	max-width: 650px
 	box-sizing: border-box
 	margin: 0 auto
 	padding: 0 20px
@@ -38,35 +38,35 @@ h1, h2, h3, h4, h5, h6
 	span
 		display: block
 
-h1
+h1, h2
 	text-align: center
+
+h1
 	color: white
 	font-size: 6em
-	span
-		color: $darkblue
-		text-transform: uppercase
-		img
-			width: 100%
-			height: auto
+	max-width: 650px
+	margin: 40px auto 10px
+	img
+		width: 100%
+		height: auto
 
 h2
 	font-size: 3em
 	color: white
-	a
-		color: white
-		border-bottom: 1px dotted white
 
 h3
 	font-size: 2em
 
 p
-	font-size: 1.2em
+	font-size: 1.4em
 	margin: 20px 0
 p:first-of-type
 	margin-top: 40px
 p:last-of-type
 	margin-bottom: 40px
 p.instructions
+	font-family: $headingfont
+	text-align: center
 	margin: 10px 0 20px
 
 label
@@ -83,17 +83,16 @@ img.leaves
 	position: fixed
 	top: 0
 	z-index: -200
-	width: auto
-	height: 80vh
+	width: 15vw
+	height: auto
+	@media (min-width: 800px)
+		width: 20vw
 img#leavesLeft
 	left: 0
 img#leavesRight
 	right: 0
 	transform: scaleX(-1)
 	filter: FlipH
-@media (min-width: 800px)
-	img.leaves
-		height: 120vh
 
 header
 	.banner
@@ -119,7 +118,10 @@ header
 
 	section#uptoyou
 		p
+			text-align: center
 			color: white
+			&.tagline
+				font-family: $headingfont
 
 .imgIllus
 	display: flex
@@ -134,19 +136,28 @@ header
 @import wordpuzzle
 
 #game1
-	h2
-		span
-			color: $lightblue
-
+	p.instructions
+		color: $darkblue
+#game2
+	p.instructions
+		color: $orange
 #game3
-	h2
-    color: $lightblue
-
+	p.instructions
+		color: $lightblue
+#game4
+	p.instructions
+		color: $orange
 #contest
 	padding-bottom: 60px
 	h2
 		span
-			color: $lightblue
+			text-align: center
+			a
+				border-bottom: 1px solid $lightblue
+				color: $lightblue
+	p.topline
+		color: $lightblue
+		font-family: $headingfont
 
 #contestForm
 	border: 40px solid
@@ -207,6 +218,13 @@ header
 #incoweb
 	.flow
 		cursor: pointer
+	p.instructions
+		color: $orange
+	p
+		text-align: center
+		img
+			max-width: 400px
+			height: auto
 
 #incoweb,
 #topito
@@ -217,13 +235,34 @@ header
 #mission,
 #whocanfile,
 #DDD
+	p.instructions
+		color: $orange
+	h3
+		color: $lightblue
+	.standalone > a
+		color: $lightblue
+		font-size: 1.2em
+		border-bottom: 1px solid $lightblue
+		font-family: $headingfont
 	ul
-		list-style: disc inside
-		padding-left: 1.2em
+		padding-left: 40px
 		margin: 40px 0
+		column-count: 2
+		column-gap: 40px
 		li
 			font-size: 1.2em
 			margin-bottom: 1.2em
+			position: relative
+			&:before
+				position: absolute
+				left: -32px
+				content: ''
+				display: inline-block
+				height: 16px
+				width: 16px
+				background-image: url('../img/starfish-darkblue.svg')
+				background-size: contain
+				background-repeat: no-repeat
 
 #extra .flow
 	display: grid
@@ -306,7 +345,7 @@ footer
 		grid-row-gap: 20px
 		img#signature
 			grid-row: 1 / 2
-			width: 302px
+			width: 250px
 			height: auto
 		.links
 			grid-row: 2 / 3
@@ -322,6 +361,7 @@ footer
 				display: flex
 				li
 					flex: 0 1 auto
+					font-size: unset
 					padding-right: 10px
 					margin-right: 10px
 					border-right: 1px solid white
@@ -332,8 +372,8 @@ footer
 					border-color: transparent
 	@media (min-width: 800px)
 		.grid
-			grid-template: auto / 302px auto
-			grid-column-gap: 80px
+			grid-template: auto / 250px auto
+			grid-column-gap: 40px
 			img#signature
 				grid-column: 1 / 2
 				grid-row: 1 / 2
