@@ -346,7 +346,7 @@ contestForm.addEventListener('submit', (e) => {
   let xhr = new XMLHttpRequest()
   xhr.onload = () => { console.log(xhr.responseText) } // success case
   xhr.onerror = () => { console.warn(xhr.responseText) } // failure case
-  xhr.open ('POST', 'https://localhost:3000', true)
+  xhr.open ('POST', 'https://ddd-server.ctrlaltdev.xyz', true)
   xhr.send (new FormData (contestForm))
   return false
 })
