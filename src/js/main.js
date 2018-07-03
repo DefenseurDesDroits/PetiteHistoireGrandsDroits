@@ -346,7 +346,17 @@ contestForm.addEventListener('submit', (e) => {
   let xhr = new XMLHttpRequest()
   xhr.onload = () => { console.log(xhr.responseText) } // success case
   xhr.onerror = () => { console.warn(xhr.responseText) } // failure case
-  xhr.open ('POST', 'https://ddd-server.ctrlaltdev.xyz', true)
-  xhr.send (new FormData (contestForm))
+  xhr.open ('POST', 'https://information.defenseurdesdroits.fr/petitehistoiregrandsdroits/concours/', true)
+  xhr.onreadystatechange = () => {
+    if(this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+      let msg = document.createElement('p')
+      msg.classList.add('contestMsg')
+      let msgTxt = document.createTextNode('Merci ! Ta participation a bien été reçue !')
+      msg.appendChild(msgTxt)
+      contestForm.remove()
+      document.querySelector('#contest').appendChild(msg)
+    }
+  }
+  xhr.send(new FormData (contestForm))
   return false
 })
