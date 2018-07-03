@@ -360,3 +360,25 @@ contestForm.addEventListener('submit', (e) => {
   xhr.send(new FormData (contestForm))
   return false
 })
+
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#FDC743",
+      "text": "#282E5E"
+    },
+    "button": {
+      "background": "#00ACA5",
+      "text": "#ffffff"
+    }
+  },
+  "theme": "edgeless",
+  "position": "bottom",
+  "static": false,
+  "content": {
+    "message": "Ce site utilise des cookies à des fins statistiques.",
+    "dismiss": "OK",
+    "link": "En savoir plus",
+    "href": "https://www.defenseurdesdroits.fr/mentions-l%C3%A9gales"
+  }
+})
