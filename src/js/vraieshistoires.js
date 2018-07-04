@@ -13,5 +13,5 @@ function selectStory(e) {
 }
 
 setInterval(function() {
-  window.parent.postMessage({height: document.clientHeigth}, "*");
-},1000);
+  window.parent.postMessage({height: document.querySelector('body').clientHeight}, "*");
+},5000);
