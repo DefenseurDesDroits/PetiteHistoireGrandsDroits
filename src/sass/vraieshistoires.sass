@@ -1,0 +1,61 @@
+// main.sass
+@import reset
+
+@import url('https://fonts.googleapis.com/css?family=Roboto|Pacifico')
+
+// @VARS
+$bodyfont: 'Roboto', sans-serif
+$headingfont: 'Pacifico', cursive
+
+$lightblue: #00ACA5
+$darkblue: #282E5E
+
+// @GLOBAL
+html,
+body
+	font-size: 10px
+	color: $darkblue
+	font-family: $bodyfont
+
+body
+	line-height: 1.4
+
+#wrapper
+	margin: 0 auto
+
+header
+	h2
+		text-align: center
+		img
+			max-width: 800px
+			width: 100%
+
+#stories
+	ul
+		display: flex
+		flex-flow: row wrap
+
+.stories__stories-item
+	flex: 1 1 calc(100% / 7)
+
+.stories__stories-button
+	background: transparent
+	border: none
+	cursor: pointer
+	text-align: center
+	width: 100%
+.stories__stories-button[disabled]
+	cursor: unset
+	
+.stories__stories-img
+	display: block
+	width: auto
+	height: calc(80vw / 7)
+	min-height: 120px
+	margin: 20px auto
+
+.stories__stories-text
+	font-family: $headingfont
+
+.stories__stories-name
+	display: block
