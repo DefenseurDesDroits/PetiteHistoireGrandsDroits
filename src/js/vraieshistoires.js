@@ -13,5 +13,5 @@ function selectStory(e) {
 }
 
 setInterval(function() {
-  parent.postMessage("height",document.clientHeigth);
+  window.parent.postMessage({height: document.clientHeigth}, "*");
 },1000);

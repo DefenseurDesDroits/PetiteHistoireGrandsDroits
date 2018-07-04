@@ -166,7 +166,10 @@
 </div>
 
 <script>
-  window.addEventListener('message', function(e) {
-    console.log('parent received message!: ', e.data);
-  }, false);
+  window.addEventListener('message', getMessage, false);
+  function getMessage(e) {
+    if (e.origin !== "https://ddd.ctrlaltdev.xyz")
+      return;
+    console.log(e);
+  }
 </script>
