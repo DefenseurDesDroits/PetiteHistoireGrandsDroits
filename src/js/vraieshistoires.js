@@ -11,3 +11,7 @@ function selectStory(e) {
   }
   e.target.classList.add('selected')
 }
+
+setInterval(function() {
+  parent.postMessage("height",document.clientHeigth);
+},1000);
