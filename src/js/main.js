@@ -348,7 +348,7 @@ contestForm.addEventListener('submit', (e) => {
   xhr.onerror = () => { console.warn(xhr.responseText) } // failure case
   xhr.open ('POST', 'https://information.defenseurdesdroits.fr/petitehistoiregrandsdroits/concours/', true)
   xhr.onreadystatechange = () => {
-    if(this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+    if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
       let msg = document.createElement('p')
       msg.classList.add('contestMsg')
       let msgTxt = document.createTextNode('Merci ! Ta participation a bien été reçue !')

@@ -10,7 +10,7 @@
   <article style="background-color: #00ACA5; margin: 40px auto 20px; padding: 20px;">
     <div style="max-width: 800px; margin: 0 auto;">
       <div style="text-align: center; vertical-align: top; display: inline-block; min-width: 250px; max-width: 100%; width: calc(302500px - 55000%);">
-        <a href="https://ddd.ctrlaltdev.xyz">
+        <a href="https://information.defenseurdesdroits.fr/petitehistoiregrandsdroits/">
           <img style="margin: 20px; max-width: calc(100% - 40px);" src="/sites/default/files/jeux.png" alt="A toi de jouer !">
         </a>
       </div>
@@ -37,7 +37,7 @@
   <article style="background-color: #E35014; margin: 20px auto; padding: 20px;">
     <div style="max-width: 800px; margin: 0 auto;">
       <div style="text-align: center; vertical-align: top; display: inline-block; min-width: 250px; max-width: 100%; width: calc(302500px - 55000%);">
-        <a href="https://ddd.ctrlaltdev.xyz/#contest">
+        <a href="https://information.defenseurdesdroits.fr/petitehistoiregrandsdroits/#contest">
           <img style="margin: 20px; max-width: calc(100% - 40px);" src="/sites/default/files/concours.png" alt="Jeu concours !">
         </a>
       </div>
@@ -51,10 +51,10 @@
   </article>
 
   <article style="margin: 20px auto;">
-    <iframe id="vraieshistoiresiframe" src="https://ddd.ctrlaltdev.xyz/vraieshistoires.html" style="width: 100%; border: none; height: 300px;"></iframe>
+    <iframe id="vraieshistoiresiframe" src="https://information.defenseurdesdroits.fr/petitehistoiregrandsdroits/vraieshistoires.html" style="width: 100%; border: none; height: 300px;"></iframe>
   </article>
 
-  <article style="background-color: #FDC743; margin: 20px auto 40px; padding: 20px;">
+  <article style="background-color: #FDC743; margin: 20px auto; padding: 20px;">
     <div style="max-width: 800px; margin: 0 auto;">
       <div style="text-align: center; vertical-align: top; display: inline-block; min-width: 150px; max-width: 100%; width: calc(302500px - 55000%);">
         <img style="margin: 20px;" src="/sites/default/files/owl.png">
@@ -82,10 +82,32 @@
       </div>
     </div>
   </article>
+
+  <article style="margin: 20px auto 40px; padding: 20px;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div style="text-align: center; vertical-align: top; display: inline-block; min-width: 250px; max-width: 100%; width: calc(302500px - 55000%);">
+        <img style="margin: 20px; max-width: calc(100% - 40px);" src="/sites/default/files/DDEeducadroit.png">
+      </div>
+      <div style="display: inline-block; min-width: calc(100% - 270px); max-width: 100%; width: calc(302500px - 55000%);">
+        <h2 style="color: #0080C9; text-transform: uppercase;">
+          Educadroit : <br>un programme de sensibilisation et de formation 
+        </h2>
+        <p>
+          Le Défenseur des droits a lancé Educadroit, un programme destiné aux enfants de 6/11 ans et aux jeunes de 12 ans pour les sensibiliser au droit, à leurs droits. Il s'adresse aux adultes, professionnels ou non, intervenant auprès d'enfants et d'adolescents.
+        </p>
+        <p>
+          Educadroit.fr regroupe des parcours interactifs, des vidéos, des ressources pédagogiques, une liste d'intervenants potentiels ou encore un espace d'autoformation pour les adultes souhaitant développer une sensibilisation au droit en direction des publics jeunes ou très jeunes. En mettant à disposition ces divers outils, Educadroit entend mieux faire comprendre aux enfants et aux jeunes le rôle et les modalités d'élaboration du droit.
+        </p>
+        <p class="btn-droits-ddd" style="text-align: left;">
+          <a href="https://educadroit.fr" target="_blank" style="padding: 5px 35px 3px; font-size: 1.3em;">Visiter</a>
+        </p>
+      </div>
+    </div>
+  </article>
 </section>
 
 <section style="margin-top: 80px;">
-  <h2 style="text-transform: uppercase; text-align: center; color: #0080C9;">Le Rôle du Défenseur des droits</h2>
+  <h2 style="text-transform: uppercase; text-align: center; color: #0080C9;"><img src="/sites/default/files/mde.png" style="margin-right: 20px; width: 150px; height: auto;">Le Rôle du Défenseur des droits</h2>
   <article>
     <div style="text-align: center; vertical-align: top; display: inline-block; min-width: 150px; max-width: 100%; width: calc(302500px - 55000%)">
       <img style="margin: 20px;" src="/sites/default/files/info.png">
@@ -168,7 +190,7 @@
 <script>
   window.addEventListener('message', getMessage, false);
   function getMessage(e) {
-    if (e.origin !== "https://ddd.ctrlaltdev.xyz")
+    if (e.origin !== "https://information.defenseurdesdroits.fr")
       return;
     let data = e.data;
     document.querySelector('#vraieshistoiresiframe').style.height = data.height + 'px';
