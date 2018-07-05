@@ -19,18 +19,36 @@ body
 
 body
 	line-height: 1.4
+	color: #26315E
 
 #wrapper
 	margin: 0 auto
 
-header
+#wrapper > header
 	h2
 		text-align: center
+		margin: 20px auto
 		img
 			max-width: 800px
 			width: 100%
+	p
+		text-align: center
+		font-size: 1.6em
+		margin: 5px auto
+	p:last-of-type
+		font-family: $headingfont
+		font-size: 1.8em
+		margin: 10px auto
+
+.starfishes
+	text-align: center
+	margin: 20px auto
+	img
+		width: 100px
+		height: auto
 
 #stories
+	margin: 20px auto
 	ul
 		display: flex
 		flex-flow: row wrap
@@ -46,16 +64,72 @@ header
 	width: 100%
 .stories__stories-button[disabled]
 	cursor: unset
+	opacity: 0.5
 	
 .stories__stories-img
-	display: block
-	width: auto
-	height: calc(80vw / 7)
-	min-height: 120px
-	margin: 20px auto
+	svg
+		width: auto
+		height: calc(80vw / 7)
+		min-height: 120px
+		margin: 20px auto
 
 .stories__stories-text
 	font-family: $headingfont
+	font-size: 1.4em
+	color: #00ACA5
 
 .stories__stories-name
 	display: block
+	font-size: 1.6em
+	color: #26315E
+
+.stories__stories-button.selected
+	.stories__stories-img
+		.cls-1
+			fill: #00ACA5
+	.stories__stories-name
+		color: #00ACA5
+
+.stories__story
+	display: block
+.stories__story.hidden
+	display: none
+
+.stories__story-testimony
+	display: flex
+	flex-flow: row nowrap
+.stories__story-testimony-img
+	flex: 0 1 auto
+	margin: 0 40px
+	svg
+		height: calc(80vw / 7)
+		width: auto
+.stories__story-testimony-text
+	flex: 1 1 auto
+	h3
+		color: #00ACA5
+		font-family: $headingfont
+		font-size: 3.6em
+	h4
+		font-family: $headingfont
+		font-size: 2.6em
+	p
+		font-style: oblique
+		font-size: 1.8em
+
+
+.stories__story-legal
+	display: flex
+	flex-flow: row nowrap
+.stories__story-legal-img
+	flex: 0 1 auto
+	margin: 0 40px
+	img
+		height: calc(60vw / 7)
+		width: auto
+.stories__story-legal-text
+	flex: 1 1 auto
+	h3
+		color: #00ACA5
+		font-family: $headingfont
+		font-size: 3.6em

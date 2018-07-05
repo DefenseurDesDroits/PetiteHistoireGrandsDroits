@@ -13,51 +13,161 @@ html
         p Un enfant ou un jeune, jusqu'à ses 18 ans, est protégé par la Convention internationale des droits de l'enfant.
         p Ses droits doivent être connus et défendus. Dans toutes les décisions qui le concerne, l'intérêt supérieur de l'enfant doit être une considération primordiale. 
         p Découvre quelques situations vécues par des enfants et des jeunes qui ont fait valoir leur droits avec l'aide du Défenseur des droits.
+      div.starfishes
+        img(src="img/2starfishes.svg")
       section#stories
         header
           ul
             li#yanis.stories__stories-item
-              button.stories__stories-button
-                img(src="img/yanis.svg").stories__stories-img
+              button(disabled data-release="1527811200").stories__stories-button
+                div.stories__stories-img
+                  include inc/svg/yanis.svg
                 p.stories__stories-text
                   span.stories__stories-name Yanis
                   | Droit à une vie familiale
             li#lisa.stories__stories-item
-              button(disabled).stories__stories-button
-                img(src="img/lisa.svg").stories__stories-img
+              button(disabled data-release="1530736200").stories__stories-button
+                div.stories__stories-img
+                  include inc/svg/lisa.svg
                 p.stories__stories-text
                   span.stories__stories-name Lisa
                   | Droit à la protection
             li#bastien.stories__stories-item
-              button(disabled).stories__stories-button
-                img(src="img/bastien.svg").stories__stories-img
+              button(disabled data-release="1530736260").stories__stories-button
+                div.stories__stories-img
+                  include inc/svg/bastien.svg
                 p.stories__stories-text
                   span.stories__stories-name Bastien
                   | Droit aux loisirs
             li#laura.stories__stories-item
-              button(disabled).stories__stories-button
-                img(src="img/laura.svg").stories__stories-img
+              button(disabled data-release="1530736320").stories__stories-button
+                div.stories__stories-img
+                  include inc/svg/laura.svg
                 p.stories__stories-text
                   span.stories__stories-name Laura
                   | Droit à l'éducation
             li#zoe.stories__stories-item
-              button(disabled).stories__stories-button
-                img(src="img/zoe.svg").stories__stories-img
+              button(disabled data-release="1530736380").stories__stories-button
+                div.stories__stories-img
+                  include inc/svg/zoe.svg
                 p.stories__stories-text
                   span.stories__stories-name Zoé
                   | Droit à la santé
             li#ruben.stories__stories-item
-              button(disabled).stories__stories-button
-                img(src="img/ruben.svg").stories__stories-img
+              button(disabled data-release="1530736440").stories__stories-button
+                div.stories__stories-img
+                  include inc/svg/ruben.svg
                 p.stories__stories-text
                   span.stories__stories-name Ruben
                   | Droit à l'égalité
             li#gaelle.stories__stories-item
-              button(disabled).stories__stories-button
-                img(src="img/gaelle.svg").stories__stories-img
+              button(disabled data-release="1530736500").stories__stories-button
+                div.stories__stories-img
+                  include inc/svg/gaelle.svg
                 p.stories__stories-text
                   span.stories__stories-name Gaëlle
                   | Liberté d'expression et d'opinion
         main
+          article#yanis-story.stories__story.hidden
+            div.stories__story-testimony
+              div.stories__story-testimony-img
+                include inc/svg/yanis.svg
+              div.stories__story-testimony-text
+                h3 Yanis
+                h4 J'ai le droit de
+                p Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+            div.stories__story-legal
+              div.stories__story-legal-img
+                img(src="img/owl.svg")
+              div.stories__story-legal-text
+                h3 Art. 345 :
+                p Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo
+          article#lisa-story.stories__story.hidden
+            div.stories__story-testimony
+              div.stories__story-testimony-img
+                include inc/svg/lisa.svg
+              div.stories__story-testimony-text
+                h3 Lisa
+                h4 J'ai le droit de
+                p Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+            div.stories__story-legal
+              div.stories__story-legal-img
+                img(src="img/owl.svg")
+              div.stories__story-legal-text
+                h3 Art. 345 :
+                p Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo
+          article#bastien-story.stories__story.hidden
+            div.stories__story-testimony
+              div.stories__story-testimony-img
+                include inc/svg/bastien.svg
+              div.stories__story-testimony-text
+                h3 Bastien
+                h4 J'ai le droit de
+                p Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+            div.stories__story-legal
+              div.stories__story-legal-img
+                img(src="img/owl.svg")
+              div.stories__story-legal-text
+                h3 Art. 345 :
+                p Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo
+          article#laura-story.stories__story.hidden
+            div.stories__story-testimony
+              div.stories__story-testimony-img
+                include inc/svg/laura.svg
+              div.stories__story-testimony-text
+                h3 Laura
+                h4 J'ai le droit de
+                p Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+            div.stories__story-legal
+              div.stories__story-legal-img
+                img(src="img/owl.svg")
+              div.stories__story-legal-text
+                h3 Art. 345 :
+                p Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo
+          article#zoe-story.stories__story.hidden
+            div.stories__story-testimony
+              div.stories__story-testimony-img
+                include inc/svg/zoe.svg
+              div.stories__story-testimony-text
+                h3 Zoé
+                h4 J'ai le droit de
+                p Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+            div.stories__story-legal
+              div.stories__story-legal-img
+                img(src="img/owl.svg")
+              div.stories__story-legal-text
+                h3 Art. 345 :
+                p Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo
+          article#ruben-story.stories__story.hidden
+            div.stories__story-testimony
+              div.stories__story-testimony-img
+                include inc/svg/ruben.svg
+              div.stories__story-testimony-text
+                h3 Ruben
+                h4 J'ai le droit de
+                p Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+            div.stories__story-legal
+              div.stories__story-legal-img
+                img(src="img/owl.svg")
+              div.stories__story-legal-text
+                h3 Art. 345 :
+                p Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo
+          article#gaelle-story.stories__story.hidden
+            div.stories__story-testimony
+              div.stories__story-testimony-img
+                include inc/svg/gaelle.svg
+              div.stories__story-testimony-text
+                h3 Gaëlle
+                h4 J'ai le droit de
+                p Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+            div.stories__story-legal
+              div.stories__story-legal-img
+                img(src="img/owl.svg")
+              div.stories__story-legal-text
+                h3 Art. 345 :
+                p Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo Trolololo
+
+      div.starfishes
+        img(src="img/2starfishes.svg")
 
     script(src="js/vraieshistoires.js")
