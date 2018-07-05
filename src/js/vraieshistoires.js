@@ -21,7 +21,7 @@ function selectStory(e) {
 }
 
 function updateSize() {
-  window.parent.postMessage({height: document.querySelector('body').clientHeight}, "*")
+  window.parent.postMessage({height: parseInt(document.querySelector('body').clientHeight) + 80} , "*")
 }
 
 function releaseStory(element) {
