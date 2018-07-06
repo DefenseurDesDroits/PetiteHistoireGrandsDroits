@@ -119,7 +119,7 @@ var questions = [
     ]
   },
   {
-    question: "À l'occasion des vacances scolaires, tu proposes à des amis de vous rassembler pour nettoyer les plages et donc participer à la préservation de l'environnemment. À quel droit ton initiative fait-elle référence ?",
+    question: "À l'occasion des vacances scolaires, tu proposes à des amis de vous rassembler pour nettoyer les plages et donc participer à la préservation de l'environnement. À quel droit ton initiative fait-elle référence ?",
     answers: [
       {
         answer: "Le droit à la participation",
@@ -134,7 +134,7 @@ var questions = [
     ]
   },
   {
-    question: "Qu'est-ce que le droit à la santé",
+    question: "Qu'est-ce que le droit à la santé ?",
     answers: [
       {
         answer: "Pouvoir manger de la viande tous les jours"
@@ -174,12 +174,12 @@ var questions = [
         valid: true
       },
       {
-        answer: "Non, on ne droit rien dire"
+        answer: "Non, on ne doit rien dire"
       }
     ]
   },
   {
-    question: "Au collège, le professeur de français organise un débat en classe. D'habitude, tu es toujours d'accord sur tout avec tes amis. Mais cette fois, chacun donne son avis et tu as l'impression de na penser comme les autres. Au moment de t'exprimer, impossible de parler. Le soir après les cours, tu en parles avec Yorick, ton cousin. Il te dit que tu aurais pu enrichir le débat, que tu as le droit de donner ton avis. À quel droit fait-il référence ?",
+    question: "Au collège, le professeur de français organise un débat en classe. D'habitude, tu es toujours d'accord sur tout avec tes amis. Mais cette fois, chacun donne son avis et tu as l'impression de ne pas penser comme les autres. Au moment de t'exprimer, impossible de parler. Le soir après les cours, tu en parles avec Yorick, ton cousin. Il te dit que tu aurais pu enrichir le débat, que tu as le droit de donner ton avis. À quel droit fait-il référence ?",
     answers: [
       {
         answer: "Le droit à la protection"
