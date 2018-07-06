@@ -352,9 +352,13 @@ contestForm.addEventListener('submit', (e) => {
       let msg = document.createElement('p')
       msg.classList.add('contestMsg')
       let msgTxt = document.createTextNode('Merci ! Ta participation a bien été reçue !')
+      let br = document.createElement('br')
+      let msgTxt2 = document.createTextNode('Les résultats seront annoncés le 30 septembre !')
       msg.appendChild(msgTxt)
+      msg.appendChild(br)
+      msg.appendChild(msgTxt2)      
       contestForm.remove()
-      document.querySelector('#contest').appendChild(msg)
+      document.querySelector('#contest .flow').appendChild(msg)
     }
   }
   xhr.send(new FormData (contestForm))
