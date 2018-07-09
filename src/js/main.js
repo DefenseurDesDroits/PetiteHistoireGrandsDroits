@@ -42,10 +42,10 @@ var matcheesSentenceList = [
   [
     "Tu as le droit d'avoir une justice adaptée à ton âge : tout enfant a droit à un avocat spécialisé pour le conseiller et le défendre, et le droit d'être jugé par un juge des enfants s'il n'a pas respecté la loi.",
     "Tu as le droit d'aller voir un médecin, une infirmière, de te soigner lorsque tu es malade, d'être bien nourri.",
-    "Tu as le droit d'etre protégé contre toute forme de violence, d'atteinte ou de brutalités physiques ou mentales, d'abandon ou de négligence.",
+    "Tu as le droit d'être protégé contre toute forme de violence, d'atteintes ou de brutalités physiques ou mentales, d'abandon ou de négligence.",
     "Tu as le droit d'aller à l'école gratuitement, d'apprendre, d'avoir accès aux journaux et aux sources d'information pour te cultiver.",
     "Tu as le droit d'exprimer librement ton opinion, tout en respectant celle des autres, de rechercher, de recevoir et de répandre des informations.",
-    "Tu dois être traité à égalité avec les autres enfants, partout dans le mondre, quels que soient ton origine, ton sexe, ta religion, tes opinions, ton handicap, tes croyances ou ta couleur de peau. Vous avez tous les mêmes droits.",
+    "Tu dois être traité à égalité avec les autres enfants, partout dans le monde, quels que soient ton origine, ton sexe, ta religion, tes opinions, ton handicap, tes croyances ou ta couleur de peau. Vous avez tous les mêmes droits.",
     "Tu as le droit d'être bien entouré, aimé et de grandir dans un environnement sain et bienveillant."
   ],
   [
@@ -77,7 +77,7 @@ var questions = [
     question: "Lequel de ces droits est un droit fondamental pour les enfants ?",
     answers: [
       {
-        answer: "Le droit d'avoir internet"
+        answer: "Le droit d'avoir Internet"
       },
       {
         answer: "Le droit d'avoir un prénom et une identité",
@@ -104,7 +104,7 @@ var questions = [
     ]
   },
   {
-    question: "Tu es dans la cour de ton école, tout le monde joue. C'est super de pouvoir se défouler à la récré ! Un petit groupe d'enfants commence une partie de football... Clémence, une copine de ta classe, veut y jouer aussi. Mais Thomas, Capitaine de l'équipe, lui interdit d'y participer parce que c'est une fille... Quel droit n'est pas respecté ici ?",
+    question: "Tu es dans la cour de ton école, tout le monde joue. C'est super de pouvoir se défouler à la récré ! Un petit groupe d'enfants commence une partie de football... Clémence, une copine de ta classe, veut y jouer aussi. Mais Thomas, capitaine de l'équipe, lui interdit d'y participer parce que c'est une fille... Quel droit n'est pas respecté ici ?",
     answers: [
       {
         answer: "Le droit à l'égalité",
@@ -198,12 +198,12 @@ var questions = [
 var scoreMsgs = [
   {
     title: "L'expert",
-    message: "Tu connais parfaitement les droits de l'enfant et tu sais reconnaître une situation qui va à l'envontre de ces droits. Les droits de l'enfant sont fondamentaux alors n'hésite pas à les partager avec tes amis et ton entourage pour qu'ils deviennent des experts comme toi !",
+    message: "Tu connais parfaitement les droits de l'enfant et tu sais reconnaître une situation qui va à l'encontre de ces droits. Les droits de l'enfant sont fondamentaux alors n'hésite pas à les partager avec tes amis et ton entourage pour qu'ils deviennent des experts comme toi !",
     scoreThresold: 6
   },
   {
     title: "Le bon connaisseur",
-    message: "Tu as de bonnes conaissances mais il te reste quelques petites choses à savoir. N'hésite pas à partager tes interrogations avec ton entourage car tu as toutes les clés en main pour devenir un expert !",
+    message: "Tu as de bonnes connaissances mais il te reste quelques petites choses à savoir. N'hésite pas à partager tes interrogations avec ton entourage car tu as toutes les clés en main pour devenir un expert !",
     scoreThresold: 3
   },
   {
