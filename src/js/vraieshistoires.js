@@ -20,10 +20,12 @@ function selectStory(e) {
   elem.classList.add('selected')
 
   if(document.querySelector('.stories__story.active')) {
-    document.querySelector('.stories__story.active').classList.replace('active', 'hidden')
+    document.querySelector('.stories__story.active').classList.remove('active')
+    document.querySelector('.stories__story.active').classList.add('hidden')
   }
   
-  document.querySelector('#'+elem.parentNode.id+'-story').classList.replace('hidden', 'active')
+  document.querySelector('#'+elem.parentNode.id+'-story').classList.remove('hidden')
+  document.querySelector('#'+elem.parentNode.id+'-story').classList.add('active')
   updateSize()
 }
 
