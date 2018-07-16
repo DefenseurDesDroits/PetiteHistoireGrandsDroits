@@ -11,12 +11,19 @@ function selectStory(e) {
   if (document.querySelector('.stories__stories-button.selected')) {
     document.querySelector('.stories__stories-button.selected').classList.remove('selected')
   }
-  e.target.classList.add('selected')
+
+  let elem = e.target
+  while (elem.tagName !== 'BUTTON') {
+    elem = elem.parentNode
+  }
+
+  elem.classList.add('selected')
 
   if(document.querySelector('.stories__story.active')) {
     document.querySelector('.stories__story.active').classList.replace('active', 'hidden')
   }
-  document.querySelector('#'+e.target.parentNode.id+'-story').classList.replace('hidden', 'active')
+  
+  document.querySelector('#'+elem.parentNode.id+'-story').classList.replace('hidden', 'active')
   updateSize()
 }
 
